@@ -28,10 +28,17 @@ public class ParkingLot {
     }
 
     public ParkingSpace getParkingSpace(VehicleType vehicleType) {
-        return new ParkingSpace();
+        ParkingSpace space = null;
+        for (ParkingFloor floor : parkingFloors) {
+            space = floor.getParkingSpace(vehicleType);
+            if (space != null) {
+                break;
+            }
+        }
+        return space;
     }
 
-    public ParkingSpace vacateParkingSpace(String parkingSpaceId) {
-        return new ParkingSpace();
-    }
+//    public ParkingSpace vacateParkingSpace(String parkingSpaceId) {
+//        return new ParkingSpace();
+//    }
 }
