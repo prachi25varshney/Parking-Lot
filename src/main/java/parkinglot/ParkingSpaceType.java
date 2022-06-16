@@ -10,10 +10,12 @@ public enum ParkingSpaceType {
 
     private int totalSlots;
 
-    ParkingSpaceType(int totalSlots){
+    ParkingSpaceType(int totalSlots) {
         this.totalSlots = totalSlots;
     }
+
     public int getTotalSlots() {
         return totalSlots;
     }
+
 }
