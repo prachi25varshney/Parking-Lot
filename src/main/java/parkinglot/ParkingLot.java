@@ -10,7 +10,13 @@ public class ParkingLot {
     List<EntranceGate> entranceGateList;
     List<ExitGate> exitGateList;
 
-    public boolean isFull(){ return false; }
+    public boolean isFull(){
+        boolean isFull = false;
+        for(ParkingFloor parkingFloor : parkingFloors){
+            isFull = isFull || parkingFloor.isFull();
+        }
+        return isFull;
+    }
     public boolean canPark(VehicleType vehicleType){ return true;}
     public ParkingSpace getParkingSpace(VehicleType vehicleType){ return new ParkingSpace();}
     public ParkingSpace vacateParkingSpace(String parkingSpaceId){ return  new ParkingSpace();}
