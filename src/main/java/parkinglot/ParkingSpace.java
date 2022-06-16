@@ -16,4 +16,16 @@ public class ParkingSpace {
     public void setAvailability(SpaceAvailability availability) {
         this.availability = availability;
     }
+
+    public ParkingSpaceType getParkingSpaceType() {
+        return parkingSpaceType;
+    }
+
+    public String getSpaceId() {
+        return spaceId;
+    }
+
+    public String getFloorId() {
+        return floorId;
+    }
 }

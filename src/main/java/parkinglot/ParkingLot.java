@@ -38,7 +38,14 @@ public class ParkingLot {
         return space;
     }
 
-//    public ParkingSpace vacateParkingSpace(String parkingSpaceId) {
-//        return new ParkingSpace();
-//    }
+    public ParkingSpace vacateParkingSpace(String parkingSpaceId) {
+        ParkingSpace space = null;
+        for (ParkingFloor floor : parkingFloors) {
+            space = floor.vacateParkingSpace(parkingSpaceId);
+            if (space != null) {
+                break;
+            }
+        }
+        return space;
+    }
 }
